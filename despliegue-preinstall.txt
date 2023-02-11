@@ -1,13 +1,13 @@
 #!/bin/bash
 tasksel install lamp-server
-apt install unzip
+apt install -y unzip
 mysql << 'FIN'
 create database wordpress character set utf8mb4 collate utf8mb4_unicode_ci;
 create user 'wordpress'@'localhost' identified by 'jornadas';
 grant all on wordpress.* to 'wordpress'@'localhost';
 flush privileges
 FIN
-apt install php7.4-zip
+apt install -y php7.4-zip
 useradd -m  wordpress -g www-data
 echo "wordpress:jornadas" | chpasswd
 chown wordpress:www-data /var/www/html/
