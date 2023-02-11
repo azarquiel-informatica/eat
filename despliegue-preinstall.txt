@@ -2,7 +2,7 @@
 tasksel install lamp-server
 apt install -y unzip
 mysql << 'FIN'
-create database wordpress character set utf8mb4 collate utf8mb4_unicode_ci;
+create database wordpress;
 create user 'wordpress'@'localhost' identified by 'jornadas';
 grant all on wordpress.* to 'wordpress'@'localhost';
 flush privileges
