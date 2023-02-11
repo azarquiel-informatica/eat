@@ -8,6 +8,7 @@ grant all on wordpress.* to 'wordpress'@'localhost';
 flush privileges
 FIN
 apt install -y php7.4-zip
+service apache2 restart
 useradd -m  wordpress -g www-data
 echo "wordpress:jornadas" | chpasswd
 chown wordpress:www-data /var/www/html/
