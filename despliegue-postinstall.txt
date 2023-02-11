@@ -1,0 +1,5 @@
+#!/bin/bash
+# cuando termine la instalación 
+rm /var/www/html/installer.php
+
+
